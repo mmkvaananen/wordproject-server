@@ -10,8 +10,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use('/songs', lyrics);
-app.use('/associations', associations);
+app.use('/api/songs', lyrics);
+app.use('/api/associations', associations);
 
 let server = app.listen(port, () => {
     console.log(`Server listening on ${server.address().port}`);

@@ -7,7 +7,7 @@ module.exports = {
     getWordAssociations: function(req, res, err) {
         let text = req.params.text;
         console.log("controller getWordAssociations Function");
-        let searchUrl = url + "&text=" + text +"&lang=en";
+        let searchUrl = url + "&text=" + text +"&lang=en&type=response&pos=adjective";
         console.log("searchUrl value is: ", searchUrl);
         axios.get(searchUrl)
             .then(response => {
